@@ -24,7 +24,7 @@ class SimulatorBase(object):
 		return '. '.join([s.strip().capitalize() for s in sentences])
 
 	def _generate_seed(self):
-		return random.choice(list(self.cache.keys()))
+		return random.choice([k for k in self.cache.keys() if k[0] == k[0].capitalize()])
 
 	def generate_text(self, minimum = 30):
 		w1, w2 = self._generate_seed()

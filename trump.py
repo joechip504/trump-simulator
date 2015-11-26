@@ -7,4 +7,4 @@ class Trump(SimulatorBase):
 
 if __name__ == '__main__':
 	trump = Trump(fodder_directory = 'fodder/')
-	print(trump.give_speech())
+	print('\n{}\n'.format(trump.give_speech()))
